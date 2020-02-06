@@ -48,14 +48,9 @@ public class View
 		 		//llamar metodo de modelo de crear la lista encadenada y hacer las operaciones necesarias (mostrar info primero, ultimo, mostrar total elementos)
 		 		//crear la LISTA
 		 		modelo.cargar();
-		 		//LLamar a modelo
+		 		//LLamar a modelo y mostrar info basica pedida en los requerimientos
 		 		modelo.mostrarInfoBasica();
-		 		//mostrar info primer comparendo
-		 		
-		 		//mostrar info ultimo comparendo
-		 		
-		 		//mostrar total de comparendos
-		 		
+
 		 		System.out.println("esta bn la metodologia"+ modelo.darTamano());
 		 		
 		  	}else{

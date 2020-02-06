@@ -35,35 +35,42 @@ public class Modelo{
 	
 	public void cargar()throws FileNotFoundException{
 	
-		String ruta = "./data/comparendos_dei_2018_small.geojson";
-		File archivo = new File (ruta);
-		JsonReader reader = new JsonReader ( new InputStreamReader(new FileInputStream(archivo)));
-		JsonObject gsonObj0 = JsonParser.parseReader(reader).getAsJsonObject();
+		String ruta = "./data/comparendos_dei_2018.geojson";
 		
-		JsonArray comparendos = gsonObj0.get("features").getAsJsonArray();
+		File ar = new File (ruta);
+		JsonReader lector = new JsonReader ( new InputStreamReader(new FileInputStream(ar)));
+	
+		JsonObject obj0 = JsonParser.parseReader(lector).getAsJsonObject();
+		
+		JsonArray comparendos = obj0.get("features").getAsJsonArray();
+		
 		int i=0;
 		
 		while (i<comparendos.size()){
 			JsonElement obj = comparendos.get(i);
 			JsonObject gsonObj = obj.getAsJsonObject();
 		
-			JsonObject gsonObjpropiedades = gsonObj.get("properties").getAsJsonObject();
-			int objid = gsonObjpropiedades.get("OBJECTID").getAsInt();
-			String fecha = gsonObjpropiedades.get("FECHA_HORA").getAsString();
-			String clasevehiculo = gsonObjpropiedades.get("CLASE_VEHI").getAsString();
-			String tiposervi= gsonObjpropiedades.get("TIPO_SERVI").getAsString();
-			String infraccion = gsonObjpropiedades.get("INFRACCION").getAsString();
-			String desinfraccion = gsonObjpropiedades.get("DES_INFRAC").getAsString();
-			String localidad = gsonObjpropiedades.get("LOCALIDAD").getAsString();
+			JsonObject propiedades = gsonObj.get("properties").getAsJsonObject();
+			int objid = propiedades.get("OBJECTID").getAsInt();
+			String infraccion = propiedades.get("INFRACCION").getAsString();
+			String fecha = propiedades.get("FECHA_HORA").getAsString();
+			String localidad = propiedades.get("LOCALIDAD").getAsString();
+			String clasevehiculo = propiedades.get("CLASE_VEHI").getAsString();
+			String tiposervi= propiedades.get("TIPO_SERVI").getAsString();
+			String desinfraccion = propiedades.get("DES_INFRAC").getAsString();
 
-			JsonObject gsonObjgeometria = gsonObj.get("geometry").getAsJsonObject();
+			JsonObject geo = gsonObj.get("geometry").getAsJsonObject();
 			
-			JsonArray gsonArrcoordenadas = gsonObjgeometria.get("coordinates").getAsJsonArray();
-			double longitud = gsonArrcoordenadas.get(0).getAsDouble();
-			double latitud = gsonArrcoordenadas.get(1).getAsDouble();
+			JsonArray coordenadas = geo.get("coordinates").getAsJsonArray();
+			
+			double latitud = coordenadas.get(1).getAsDouble();
+
+			double longitud = coordenadas.get(0).getAsDouble();
 			
 			Comparendo agregar = new Comparendo(objid, fecha, clasevehiculo, tiposervi, infraccion, desinfraccion, localidad, longitud, latitud);
+			
 			datos.add(agregar);
+			
 			i++;
 		
 		}

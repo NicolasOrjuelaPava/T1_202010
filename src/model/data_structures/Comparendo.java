@@ -23,7 +23,7 @@ public class Comparendo {
 	
 	}
 	
-	//generados automaticamente
+	//generados automaticamente, getters y setters
 	public int getObjid() {
 		return objid;
 	}

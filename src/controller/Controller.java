@@ -16,7 +16,6 @@ public class Controller {
 	
 	/**
 	 * Crear la vista y el modelo del proyecto
-	 * @param capacidad tamaNo inicial del arreglo
 	 */
 	public Controller ()
 	{

@@ -56,27 +56,36 @@ public class ListaEncadenada<T> implements IListaEncadenada{
 	}
 	
 	
-	public T buscarObjId(int posicion){
+	public T buscarObjId(int ac){
 		if (primerNodo == null){
 			return null;
+			
 		}else{
-			Nodo<T> puntero = (Nodo<T>) primerNodo;
-			int cont =0;
-			while (cont<posicion && puntero.darSiguiente()!= null){
-				puntero =(Nodo<T>) puntero.darSiguiente();
-				cont++;
+			
+			Nodo<T> r = (Nodo<T>) primerNodo;
+			int num =0;
+			
+			while (num<ac && r.darSiguiente()!= null){
+				
+				r =(Nodo<T>) r.darSiguiente();
+				
+				num++;
 			}
-			if (cont!=posicion){
+			
+			if (num!=ac){
+			
 				return null;
 			}else {
-				return (T) puntero.darActual();
+				
+				return (T) r.darActual();
 			}
 		}
 
 	}
 	
-	//ojo, me puede dar nullpointer
+
 	public void add(Comparendo n){
+		
 		Nodo actual = (Nodo) primerNodo;
 		boolean centinela = false;
 		
@@ -92,7 +101,9 @@ public class ListaEncadenada<T> implements IListaEncadenada{
 		}
 		
 	}
-	
-	
+
+
+
+
 	
 }
