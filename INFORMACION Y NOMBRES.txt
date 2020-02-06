@@ -1,5 +1,5 @@
 Nicolas Orjuela Pava 201913579
-Geisson Ponce 
-
-*NOTA: Se basÛ el proyecto en las presentaciones de la clase, ejemplos dados por el profesor, monitores y p·ginas usadas de referencia y guÌa tales como https://github.com/google/gson, y dem·s p·ginas de acceso p˙blico por internet, como StudyTrials.
+Geisson Ponce 201913908
+GRUPO 4
+*NOTA: Se bas√≥ el proyecto en las presentaciones de la clase, ejemplos dados por el profesor, monitores y p√°ginas usadas de referencia y gu√≠a tales como https://github.com/google/gson, y dem√°s p√°ginas de acceso p√∫blico por internet, como StudyTrials.
 ** El diagrama UML se encuentra en la carpeta DOCS del proyecto
