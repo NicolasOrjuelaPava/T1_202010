@@ -1,5 +1,0 @@
-Nicolas Orjuela Pava 201913579
-Geisson Ponce 201913908
-GRUPO 4, de la lista actualizada, nosotros somos la pareja que hizo el cambio de compañeros.
-*NOTA: Se basó el proyecto en las presentaciones de la clase, ejemplos dados por el profesor, monitores y páginas usadas de referencia y guía tales como https://github.com/google/gson, y demás páginas de acceso público por internet, como StudyTrials.
-** El diagrama UML se encuentra en la carpeta DOCS del proyecto
